@@ -1,0 +1,8 @@
+select 
+stud.fio,
+sub.discipline_name,
+avg(value)
+from mark m
+inner join student stud on stud.id=m.id_student
+inner join subject sub on sub.id=m.id_subject
+group by m.id_student,m.id_subject
